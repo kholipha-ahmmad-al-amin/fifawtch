@@ -136,3 +136,11 @@ initTheme();
 if (new URLSearchParams(location.search).get("autoplay") === "1") {
   startStream();
 }
+
+// Prevent the embedded stream from maliciously redirecting the parent page
+window.addEventListener("beforeunload", (e) => {
+  if (streamStarted) {
+    e.preventDefault();
+    e.returnValue = "";
+  }
+});
