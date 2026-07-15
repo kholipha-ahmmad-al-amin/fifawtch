@@ -22,7 +22,6 @@ function createPlayerIframe() {
   const iframe = document.createElement("iframe");
   iframe.title = "England vs Argentina Player";
   iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
-  iframe.sandbox = "allow-scripts allow-same-origin allow-presentation";
   iframe.referrerPolicy = "strict-origin-when-cross-origin";
   iframe.setAttribute("scrolling", "no");
   return iframe;
