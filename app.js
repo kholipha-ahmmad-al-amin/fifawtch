@@ -22,6 +22,7 @@ function createPlayerIframe() {
   const iframe = document.createElement("iframe");
   iframe.title = "England vs Argentina Player";
   iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+  iframe.sandbox = "allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-downloads";
   iframe.referrerPolicy = "strict-origin-when-cross-origin";
   iframe.setAttribute("scrolling", "no");
   return iframe;
@@ -136,11 +137,3 @@ initTheme();
 if (new URLSearchParams(location.search).get("autoplay") === "1") {
   startStream();
 }
-
-// Prevent the embedded stream from maliciously redirecting the parent page
-window.addEventListener("beforeunload", (e) => {
-  if (streamStarted) {
-    e.preventDefault();
-    e.returnValue = "";
-  }
-});
