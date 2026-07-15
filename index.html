@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="England vs Argentina live stream. Built by EquiSaaS BD." />
+  <meta name="author" content="Kholipha Ahmmad Al-Amin, EquiSaaS BD" />
+  <title>England vs Argentina Live | FIFA Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">⚽</span>
+        <span class="logo-text">FIFA<span>Watch</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#live" class="active">Live</a>
+        <a href="#credits">Credits</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="live-badge">
+          <span class="pulse"></span>
+          LIVE
+        </span>
+        <button type="button" class="btn-icon" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="player-section" id="live">
+      <div class="player-solo">
+        <div class="player-frame" id="playerFrame">
+          <!-- iframe is injected on Watch Live so the embed cannot navigate this page -->
+          <div class="player-overlay" id="playerOverlay">
+            <div class="overlay-content">
+              <div class="match-flags">
+                <span class="flag" title="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                <span class="vs">VS</span>
+                <span class="flag" title="Argentina">🇦🇷</span>
+              </div>
+              <h2>England vs Argentina</h2>
+              <p>Tap below to start watching</p>
+              <button type="button" class="btn-play" id="startStream">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                Watch Live
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-bar">
+          <div class="match-info">
+            <div class="teams">
+              <div class="team">
+                <span class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+                <span class="team-name">England</span>
+              </div>
+              <div class="score-block">
+                <span class="score" id="scoreHome">0</span>
+                <span class="score-sep">:</span>
+                <span class="score" id="scoreAway">0</span>
+                <span class="match-status">LIVE</span>
+              </div>
+              <div class="team team-away">
+                <span class="team-name">Argentina</span>
+                <span class="team-flag">🇦🇷</span>
+              </div>
+            </div>
+          </div>
+          <div class="match-actions">
+            <button type="button" class="btn-ghost" id="btnFullscreen" title="Fullscreen">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+              </svg>
+              Fullscreen
+            </button>
+            <button type="button" class="btn-ghost" id="btnRefresh" title="Reload stream">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 4v6h-6M1 20v-6h6"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+              Refresh
+            </button>
+            <button type="button" class="btn-primary" id="btnShare">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
+              </svg>
+              Share
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section credits-section" id="credits">
+      <div class="card credits-card">
+        <div class="credits-body">
+          <p class="credits-label">Built by</p>
+          <p class="credits-name">
+            <a href="https://kholipha-ahmmad-al-amin.equisaas-bd.com/" target="_blank" rel="noopener">
+              Kholipha Ahmmad Al-Amin
+            </a>
+            <span class="credits-bn">খলিফা আহম্মেদ আল-আমিন</span>
+          </p>
+          <p class="credits-title">
+            Software Engineer &amp; AI Specialist · Founder &amp; CEO,
+            <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">EquiSaaS BD</a>
+            · Principal Consultant,
+            <a href="https://aritconsultancy.com/" target="_blank" rel="noopener">AR IT Consultancy</a>
+          </p>
+          <div class="credits-links">
+            <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">EquiSaaS BD</a>
+            <a href="https://kholipha-ahmmad-al-amin.equisaas-bd.com/" target="_blank" rel="noopener">Portfolio</a>
+            <a href="https://github.com/kholipha-ahmmad-al-amin" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/kholipha-ahmmad-al-amin" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/al_amin5519" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-credit">
+        <p>
+          Built by
+          <a href="https://kholipha-ahmmad-al-amin.equisaas-bd.com/" target="_blank" rel="noopener">
+            Kholipha Ahmmad Al-Amin
+          </a>
+          <span class="credits-bn-inline">খলিফা আহম্মেদ আল-আমিন</span>
+        </p>
+        <p class="footer-role">
+          Software Engineer &amp; AI Specialist · Founder &amp; CEO of
+          <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">EquiSaaS BD</a>
+        </p>
+        <p class="footer-backlink">
+          <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">EquiSaaS BD</a>
+          ·
+          <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">equisaas-bd.com</a>
+        </p>
+      </div>
+      <nav class="footer-seo-links" aria-label="Links">
+        <a href="https://equisaas-bd.com/" target="_blank" rel="noopener">EquiSaaS BD</a>
+        <a href="https://kholipha-ahmmad-al-amin.equisaas-bd.com/" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://aritconsultancy.com/" target="_blank" rel="noopener">AR IT Consultancy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
